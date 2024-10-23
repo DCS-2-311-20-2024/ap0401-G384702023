@@ -239,7 +239,7 @@ function init() {
     if(ball.position.x>paddle.position.x+paddleL/2){
       vx = Math.abs(vx);
     }
-    else if(ball.position.x < -(paddle.position.x)+paddleL/2){
+    else if(ball.position.x < paddle.position.x -paddleL/2){
       vx = -Math.abs(vx);
     }
     if(nBrick<=0){
@@ -270,7 +270,7 @@ function init() {
         brick.position.set(
           (w + gapX)*(c-((param.nCol-1)/2)),
           0,
-          -(h+gapZ)*r
+          -(d+gapZ)*r
         )
         brick.geometry.computeBoundingBox();
         bricks.add(brick);
